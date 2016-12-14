@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="ui-mobile"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="">
+<meta name="author" content="">
+<meta name="description" content="Ibu Hamil - Android">
+<meta name="keywords" content="mobile css, ibu hamil">
+<title>Ibu Hamil</title>
+
+<!-- CSS -->
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/jquery.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/pink.css">
+<link type="text/css" rel="stylesheet" href="css/swipebox.css">
+
+<link href="css/select2.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" async="" src="css/request.htm"></script></head>
+<body class="ui-mobile-viewport ui-overlay-b">
+
+<div data-role="page" id="contact" class="secondarypage ui-page ui-page-theme-b ui-page-header-fixed ui-page-active" data-theme="b" data-url="contact" tabindex="0" style="padding-top: 50px;">
+
+    <div data-role="header" data-position="fixed" role="banner" class="ui-header ui-bar-inherit ui-header-fixed slidedown ui-panel-fixed-toolbar ui-fixed-hidden">
+        <div class="nav_left_button"><a href="#" class="nav-toggle ui-link"><span></span></a></div>
+        <div class="nav_center_logo">SI Ibu Hamil</div>
+        <div class="nav_right_button"><a href="#right-panel" class="ui-link"><img src="img/user.png" alt="" title=""></a></div>
+        <div class="clear"></div>
+    </div><!-- /header -->
+
+    <div class="ui-panel-wrapper"><div role="main" class="ui-content">
+
+       <div class="pages_maincontent">
+         <form class="cmxform" id="ContactForm" method="post" action="" novalidate="novalidate">
+         </form>
+            <h2 class="page_title">Registrasi Pasien (Ibu Hamil)</h2>
+              <div class="page_content">
+
+                    <h2 id="Note"></h2>
+                    <div class="contactform">
+                    <label>NIK: *</label>
+                    <input name="NIK" id="NIK" class="form_input required" data-role="none" type="text" placeholder="NIK">
+                    <label>Nama Pasien (Ibu): *</label>
+                    <input name="NAMA" id="NAMA" class="form_input required" data-role="none" type="text" placeholder="Nama">
+                    <label>Nama KK: *</label>
+                    <input name="NAMA_KK" id="NAMA_KK" class="form_input required" data-role="none" type="text" placeholder="Nama Kepala Keluarga">
+                    <label>Nama Suami: *</label>
+                      <table>
+                          <tr><td width="5%"><input id="cekKK" class="" name="cekKK" type="checkbox"></td>
+                           <td width="50%">Centang apabila Nama Suami sama dengan Nama KK</td>
+                      <table>
+                    <input name="NAMA_SUAMI" id="NAMA_SUAMI" class="form_input required" data-role="none" type="text"  placeholder="Nama Suami">
+                    <label>Tanggal Lahir: *</label>
+                    <input type="text" name="TGL_LAHIR" class="form_input required" id="TGL_LAHIR" data-role="none" autocomplete="off" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                    <label>Alamat: *</label>
+                    <textarea name="ALAMAT" id="ALAMAT" class="form_textarea textarea required" rows="" cols="" data-role="none" placeholder="Alamat"></textarea>
+                    <label>No Telp:</label>
+                    <input name="NO_TELP" id="NO_TELP" class="form_input" data-role="none" type="text" placeholder="No Telp">
+                    <label>HP:</label>
+                    <input name="HP" id="HP" class="form_input" data-role="none" type="text" placeholder="HP">
+                    <label>Pekerjaan:</label>
+                    <input name="PEKERJAAN" id="PEKERJAAN" class="form_input" data-role="none" type="text" placeholder="Pekerjaan">
+                    <label>No BPJS:</label>
+                    <input name="NO_BPJS" id="NO_BPJS" class="form_input" data-role="none" type="text" placeholder="No BPJS">
+                    <hr>
+                    <label>Hamil Ke:</label>
+                    <input name="HAMIL_KE" id="HAMIL_KE" class="form_input" data-role="none" type="text" placeholder="Hamil Ke" data-inputmask='"mask": "99", "placeholder": ""' data-mask>
+                    <label>Tanggal Haid Pertama Haid Terakhir (HPHT): *</label>
+                    <input type="text" name="HPHT" class="form_input required" id="HPHT" data-role="none" autocomplete="off" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                    <label>Tanggal Hari Perkiraan Lahir (HPL): *</label>
+                    <input type="text" name="HPL" class="form_input required" id="HPL" data-role="none" autocomplete="off" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                    <label>Umur Kehamilan: (Dalam Minggu)</label>
+                    <input name="UMUR_KEHAMILAN" id="UMUR_KEHAMILAN" class="form_input" data-role="none" type="text" placeholder="Umur Kehamilan" data-inputmask='"mask": "99", "placeholder": ""' data-mask>
+                    <label>Golongan Darah: </label>
+                    <select class="form_input" id="GOL_DARAH" name="GOL_DARAH" data-role="none" style="width:100%">
+                      <option value=""></option>
+          						<option value="-">-- Tidak Tahu --</option>
+          						<option value='A'>A</option>
+          						<option value='B'>B</option>
+          						<option value='O'>O</option>
+          						<option value='AB'>AB</option>
+          					</select>
+                    <label>HB: </label>
+                    <input name="HB" id="HB" class="form_input" data-role="none" type="text" placeholder="HB" onblur="cekKoma(this, this.value);" data-inputmask='"mask": "99.9", "placeholder": ""' data-mask>
+                    <label>Berat Badan: (Dalam Kg)</label>
+                    <input class="form_input" id="BB" name="BB" type="text" data-role="none" onblur="cekKoma(this, this.value);" data-inputmask='"mask": "99.9", "placeholder": ""' data-mask>
+                    <label>Tinggi Badan: (Dalam Cm)</label>
+                    <input class="form_input" id="TB" name="TB" type="text" data-role="none" onblur="cekKoma(this, this.value);" data-inputmask='"mask": "999", "placeholder": ""' data-mask>
+                    <label>LILA: </label>
+                    <input class="form_input" data-role="none"  id="LILA" name="LILA" type="text" onblur="cekKoma(this, this.value);" data-inputmask='"mask": "99.9", "placeholder": ""' data-mask>
+                    <label>IMT: </label>
+                    <input class="form_input" data-role="none"  id="IMT" name="IMT" type="text" readonly onblur="cekKoma(this, this.value);" data-inputmask='"mask": "99.9", "placeholder": ""' data-mask>
+                    <label>Tensi: (Dalam mmHg)</label>
+                    <input style="width:50px" class="form_input" data-role="none"  id="TENSI1" name="TENSI1" type="text" onblur="cekKoma(this, this.value);"  data-inputmask='"mask": "999", "placeholder": ""' data-mask> / <input style="width:50px" class="form_input" data-role="none"  id="TENSI2" name="TENSI2" type="text" onblur="cekKoma(this, this.value);"  data-inputmask='"mask": "999", "placeholder": ""' data-mask>
+                    <label>ROT: </label>
+                    <table>
+                        <tr><td width="5%"><input type="radio" id="ROT" name="ROT" value="+"></td><td width="20%">Positif</td>
+                         <td width="5%"><input type="radio" id="ROT" name="ROT" value="-"></td><td>Negatif</td>
+                    </table>
+                    <label>MAP: </label>
+                    <table>
+                        <tr><td width="5%"><input type="radio" id="MAP" name="MAP" value="+"></td><td width="20%">Positif</td>
+                         <td width="5%"><input type="radio" id="MAP" name="MAP" value="-"></td><td>Negatif</td>
+                    </table>
+                    <label>Jarak Kehamilan: (Dalam Tahun)</label>
+                    <input style="width:50px" class="form_input" data-role="none"  id="JARAK_KEHAMILAN" name="JARAK_KEHAMILAN" type="text"><label>Status Imunisasi: </label>
+                    <select style="width:100%" class="form_input" id="STATUS_TT" name="STATUS_TT" data-role="none">
+          						<option value=""></option>
+                      <option value="-">-</option>
+          						<option value='T1'>T1</option>
+          						<option value='T2'>T2</option>
+          						<option value='T3'>T3</option>
+          						<option value='T4'>T4</option>
+                      <option value='T5'>T5</option>
+          					</select>
+                    <label>Pemberian Imunisasi: </label>
+                    <input type="text" name="TGL_TT" class="form_input" data-role="none" id="TGL_TT" autocomplete="off" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                    <label>Dapat Buku KIA: </label>
+                    <input type="radio" value="1" name="DAPAT_BUKU" class="" id="DAPAT_BUKU" /> Ya &nbsp;
+                    <input type="radio" value="0" name="DAPAT_BUKU" class="" id="DAPAT_BUKU" /> Tidak
+                    <label>Dapat Stiker: </label>
+                    <input type="radio" value="1" name="DAPAT_STIKER" class="" id="DAPAT_STIKER" /> Ya &nbsp;
+                    <input type="radio" value="0" name="DAPAT_STIKER" class="" id="DAPAT_STIKER" /> Tidak
+
+                    <input name="submit" class="form_submit" id="submit" data-role="none" value="Simpan" type="submit">
+                    <label id="loader" style="display:none;"><img src="img/loader.gif" alt="Loading..." id="LoadingGraphic"></label>
+                    </div>
+
+
+              </div>
+        </div>
+    </div></div><!-- /content -->
+
+    <div data-role="panel" id="left-panel" data-display="reveal" data-position="left" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-inherit ui-panel-animate ui-panel-closed">
+
+              <div class="ui-panel-inner"><nav class="main-nav">
+                <ul>
+                  <li><a href="#" data-transition="slidefade" class="ui-link"><img src="img/home.png" alt="" title=""><span>Home</span></a></li>
+                  <li><a href="#" data-transition="slidefade" class="ui-link"><img src="img/team.png" alt="" title=""><span>About</span></a></li>
+                  <li><a href="#" data-transition="slidefade" class="ui-link"><img src="img/settings.png" alt="" title=""><span>Features</span></a></li>
+                  <li><a href="#" data-transition="slidefade" class="ui-link"><img src="img/blog.png" alt="" title=""><span>Blog</span></a></li>
+                  <li><a href="#" data-transition="slidefade" class="ui-link"><img src="img/photos.png" alt="" title=""><span>Photos</span></a></li>
+                  <li><a href="#" data-transition="slidefade" class="ui-link"><img src="img/video.png" alt="" title=""><span>Videos</span></a></li>
+                  <li><a href="#" data-transition="slidedown" class="ui-link"><img src="img/lock.png" alt="" title=""><span>Login</span></a></li>
+                  <li><a href="#right-panel" class="ui-link"><img src="img/user.png" alt="" title=""><span>Account</span></a></li>
+                  <li><a href="#" data-transition="slidefade" class="ui-link"><img src="img/heart.png" alt="" title=""><span>Social</span></a></li>
+                  <li><a href="tel:1234%205678" class="external ui-link"><img src="img/phone.png" alt="" title=""><span>Call Now</span></a></li>
+                  <li><a href="#" data-transition="slidefade" class="ui-link"><img src="img/contact.png" alt="" title=""><span>Contact</span></a></li>
+                </ul>
+              </nav></div>
+
+    </div><!-- /panel -->
+
+    <div data-role="panel" id="right-panel" data-display="reveal" data-position="right" class="ui-panel ui-panel-position-right ui-panel-display-reveal ui-panel-closed ui-body-inherit ui-panel-animate">
+
+          <div class="ui-panel-inner"><div class="user_login_info">
+
+                    <div class="user_thumb_container">
+                    <img src="img/profile.jpg" alt="" title="">
+                        <div class="user_thumb">
+                        <img src="img/author.png" alt="" title="">
+                        </div>
+                    </div>
+
+                    <div class="user_details">
+                    <p>Sarah Williams</p>
+                        <ul class="user_social">
+                        <li><a href="#" class="ui-link"><img src="img/twitter.png" alt="" title=""></a></li>
+                        <li><a href="#" class="ui-link"><img src="img/facebook.png" alt="" title=""></a></li>
+                        <li><a href="#" class="ui-link"><img src="img/dribbble.png" alt="" title=""></a></li>
+                        </ul>
+                    </div>
+
+
+                   <nav class="user-nav">
+                        <ul>
+                          <li><a href="#" class="ui-link"><img src="img/settings.png" alt="" title=""><span>Settings</span></a></li>
+                          <li><a href="#" class="ui-link"><img src="img/briefcase.png" alt="" title=""><span>Account</span></a></li>
+                          <li><a href="#" class="ui-link"><img src="img/message.png" alt="" title=""><span>Messages</span><strong class="yellow">12</strong></a></li>
+                          <li><a href="#" class="ui-link"><img src="img/download.png" alt="" title=""><span>Downloads</span><strong class="yellow">5</strong></a></li>
+                          <li><a href="#" class="ui-link"><img src="img/lock.png" alt="" title=""><span>Logout</span></a></li>
+                        </ul>
+                   </nav>
+          </div><div class="close_loginpopup_button"><a href="#" data-rel="close" class="ui-link"><img src="img/menu_close.png" alt="" title=""></a></div></div>
+
+
+    </div><!-- /panel -->
+
+</div><!-- /page -->
+<script src="js/jquery_002.js"></script>
+<script src="js/jquery_005.js"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/email.js"></script>
+<script type="text/javascript" src="js/jquery_004.js"></script>
+<script src="js/jquery_003.js"></script>
+
+<script src="js/jquery.min.js"></script>
+<!-- InputMask -->
+<script src="js/input-mask/jquery.inputmask.js" type="text/javascript"></script>
+<script src="js/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
+<script src="js/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
+
+<!-- Combo Box -->
+<script src="js/select2.min.js"></script>
+
+<script>
+var $j = jQuery.noConflict();
+
+//Insisialisasi BB & TT
+document.getElementById("BB").addEventListener("blur", hitungIMT);
+document.getElementById("TB").addEventListener("blur", hitungIMT);
+
+//Hitung IMT
+function hitungIMT() {
+    var BB = parseInt($('#BB').val());
+    var TB = parseInt($('#TB').val());
+    var IMT = '';
+
+    if(BB != 0 && TB != 0 )
+    {
+      IMT = BB / ((TB /100)*(TB /100));
+      $('#IMT').val(IMT);
+    }
+}
+
+//Cek Koma
+function cekKoma(e, val) {
+  var num = val.split(".");
+    if(num[1] == '') {
+        e.value = num[0]+'.0';
+    }
+}
+
+$j(document).ready(function() {
+  //Data Mask
+  $j("[data-mask]").inputmask();
+
+  //Select
+  $j("#GOL_DARAH").select2({
+    placeholder: "Pilih Golongan Darah"
+  });
+  $j("#STATUS_TT").select2({
+    placeholder: "Pilih Status Imunisasi"
+  });
+  //End Select
+
+  //Cek Nama Suami
+  $j('#cekKK').on("change", function(e) {
+    if ($j('#cekKK').is(':checked')) {
+      var kk =  $('#NAMA_KK').val();
+      $('#NAMA_SUAMI').val(kk);
+      document.getElementById("NAMA_SUAMI").readOnly = true;
+    }
+    else
+    {
+      $('#NAMA_SUAMI').val('');
+      document.getElementById("NAMA_SUAMI").readOnly = false;
+    }
+  });
+
+  //Simpan
+  $j('#submit').on("click", function(e) {
+    $j.post("function/simpan.php?act=registrasi_pasien",
+      {
+          NIK: $('#NIK').val(),
+          NAMA: $('#NAMA').val(),
+          NAMA_KK: $('#NAMA_KK').val(),
+          NAMA_SUAMI: $('#NAMA_SUAMI').val(),
+          ALAMAT: $('#ALAMAT').val(),
+      }
+      ,function(data){
+        location.href = "registrasi.htm";
+    });
+
+  });
+
+});
+</script>
+
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div><div class="ui-panel-dismiss" style=""></div><div class="ui-panel-dismiss"></div>
+
+
+
+</body></html>
